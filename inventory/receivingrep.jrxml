@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="700" pageHeight="842" columnWidth="680" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="c836f985-f83e-4906-9185-f6af20f7df6c">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="startd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="endd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     stocks.`ItemCode` AS stocks_ItemCode,
+     stocks.`PO` AS stocks_PO,
+     stocks.`Description` AS stocks_Description,
+     stocks.`QTY` AS stocks_QTY,
+     stocks.`UOM` AS stocks_UOM,
+     stocks.`Price` AS stocks_Price,
+     stocks.`Department` AS stocks_Department,
+     stocks.`StoredLocation` AS stocks_StoredLocation,
+     stocks.`DateTime` AS stocks_DateTime,
+     stocks.`DeliveredBy` AS stocks_DeliveredBy
+FROM
+     `stocks` stocks where 
+stocks.`DateTime` between $P{startd} and $P{endd}]]>
+	</queryString>
+	<field name="stocks_ItemCode" class="java.lang.String"/>
+	<field name="stocks_PO" class="java.lang.String"/>
+	<field name="stocks_Description" class="java.lang.String"/>
+	<field name="stocks_QTY" class="java.lang.String"/>
+	<field name="stocks_UOM" class="java.lang.String"/>
+	<field name="stocks_Price" class="java.lang.String"/>
+	<field name="stocks_Department" class="java.lang.String"/>
+	<field name="stocks_StoredLocation" class="java.lang.String"/>
+	<field name="stocks_DateTime" class="java.lang.String"/>
+	<field name="stocks_DeliveredBy" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="176" y="0" width="314" height="69" uuid="14e16a52-a95e-4f7a-a611-dcc87dd58889"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[
+       HDJ BAYAWAN AGRI-VENTURE CORPORATION
+                   SUGAR DIVISION TOLONG
+      CARANOCHE,STA. CATALINA NEGROS ORIENTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="119" width="61" height="20" uuid="63333851-d1e1-4a60-9655-5ff902191158"/>
+				<text><![CDATA[ItemCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="119" width="65" height="20" uuid="5463f5b6-2a55-4e14-9d67-bfa4284c6320"/>
+				<text><![CDATA[stocks_PO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="119" width="100" height="20" uuid="a34755ad-5113-4dad-92d2-2e00c9a22f93"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="119" width="30" height="20" uuid="300f11bd-c442-4706-9188-0ed8f17e0cea"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="119" width="29" height="20" uuid="a10325c2-7c52-4e91-ba63-cd73688da40a"/>
+				<text><![CDATA[UOM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="119" width="39" height="20" uuid="5e772126-6ec9-46f1-a941-24e719c4e44b"/>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="119" width="58" height="20" uuid="d56f4a28-5a67-4b83-a907-12bd2ea6f68b"/>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="119" width="144" height="20" uuid="3cbeaf49-6834-42a1-a0cf-6f3afa2e8f71"/>
+				<text><![CDATA[StoredLocation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="518" y="119" width="75" height="20" uuid="4d81f73a-f19d-4fce-b150-0579da7c8e4c"/>
+				<text><![CDATA[Date/TIme]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="592" y="119" width="86" height="20" uuid="548ea700-0ad5-4bde-881f-40b73c4c2da6"/>
+				<text><![CDATA[DeliveredBy]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="138" width="678" height="1" uuid="298e5b44-b3e5-4feb-adad-313a6e39e979"/>
+			</line>
+			<staticText>
+				<reportElement x="177" y="73" width="46" height="20" uuid="8cc8c3c6-018e-4154-8e20-dd6bc2fb05a7"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Start:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="73" width="46" height="20" uuid="406284b2-1ee5-4213-9d2a-f60bb6e7340d"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[End:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="222" y="73" width="118" height="20" uuid="2b3aee68-aca7-4d97-a582-72c79e3abcad"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{startd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="73" width="117" height="20" uuid="423480ce-317b-4204-91e8-147f9e77e5b2"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endd}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-1" width="61" height="20" uuid="50ce7993-8c89-4e8b-9dea-22e3d655f8bf"/>
+				<textFieldExpression><![CDATA[$F{stocks_ItemCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="65" height="20" uuid="26f43b93-318c-4455-9852-b49e4027fdcb"/>
+				<textFieldExpression><![CDATA[$F{stocks_PO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="100" height="20" uuid="0157b600-ffd3-4048-8ef5-8ac84bb79b99"/>
+				<textFieldExpression><![CDATA[$F{stocks_Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="-1" width="30" height="20" uuid="8b9d5eae-4e9d-49d1-b664-306bfc72b726"/>
+				<textFieldExpression><![CDATA[$F{stocks_QTY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="0" width="29" height="20" uuid="0c003b12-f314-499e-8d1b-59b862e981b8"/>
+				<textFieldExpression><![CDATA[$F{stocks_UOM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="39" height="20" uuid="934dea24-c477-4f36-bcbc-0d0193e42934"/>
+				<textFieldExpression><![CDATA[$F{stocks_Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="0" width="58" height="20" uuid="50c6c55c-e085-42e6-91ff-c6b9414fa361"/>
+				<textFieldExpression><![CDATA[$F{stocks_Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="0" width="144" height="20" uuid="1f9069f9-7498-48a7-824f-e84f6714cd2f"/>
+				<textFieldExpression><![CDATA[$F{stocks_StoredLocation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="519" y="0" width="75" height="20" uuid="a023de27-ba0b-431f-a362-9cad0fa42f11"/>
+				<textFieldExpression><![CDATA[$F{stocks_DateTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="594" y="0" width="84" height="20" uuid="6909b06e-0899-4afd-bd1c-75de1a5ec9f7"/>
+				<textFieldExpression><![CDATA[$F{stocks_DeliveredBy}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
